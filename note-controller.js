@@ -18,5 +18,26 @@
     notelistview.convertToHtml(notelist);
   };
 
+  changeNote();
+
+  function changeNote() {
+    window.addEventListener("hashchange", showNoteOnPage);
+  };
+
+  function showNoteOnPage() {
+    showNote(getNoteIdFromUrl(window.location));
+  };
+
+  function getNoteIdFromUrl(location) {
+     return location.hash.split("#notes/")[1];
+   };
+
+   function showNote(note_id) {
+     var note = this.notelist.findNoteById(parseInt(note_id));
+     var singleNoteView = new SingleNoteView(note);
+     document.getElementById("note").innerHTML = singleNoteView.convertToHtml();
+   }
+
+
   exports.NoteController = NoteController;
 })(this);

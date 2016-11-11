@@ -6,8 +6,8 @@
   }
 
 
-  SingleNoteView.prototype.convertToHtml = function (note) {
-    var html = "<div> " + note.string + " </div>"
+  SingleNoteView.prototype.convertToHtml = function () {
+    var html = "<div> " + this.string + " </div>"
     return html
   }
 

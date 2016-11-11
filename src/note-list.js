@@ -21,6 +21,13 @@ NoteList.prototype.convertToString = function () {
   }
 };
 
+NoteList.prototype.findNoteById = function(id) {
+    for (var i = 0; i < this.notes.length; i++) {
+      if (this.notes[i].id === id) {
+        return this.notes[i]
+      }
+    }
+  }
 
   exports.NoteList = NoteList;
  })(this);

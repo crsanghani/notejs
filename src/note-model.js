@@ -1,6 +1,6 @@
 (function(exports) {
 
-    var idCounter = -1;
+    var idCounter = 0;
 
     function Note(text) {
         this.string = text;

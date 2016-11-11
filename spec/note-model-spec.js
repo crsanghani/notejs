@@ -9,8 +9,8 @@ describe('Note', function() {
     it('has an id', function() {
         var note = new Note("This is less retarderd");
         var note1 = new Note("This is even less retarderd");
-        expect(note.id).toEqual(0)
-        expect(note1.id).toEqual(1)
+        expect(note.id).toEqual(1)
+        expect(note1.id).toEqual(2)
     });
 
 })
